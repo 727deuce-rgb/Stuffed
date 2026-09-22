@@ -1,29 +1,27 @@
-# Forgecloud
+# Forgecloud: full SaaS foundation
 
-Forgecloud is a Next.js full-stack workspace concept combining:
+Forgecloud is a Next.js workspace combining GitHub-style collaboration, Replit-style instant environments, Supabase-backed data, and Base44-style prompt-to-app onboarding. “Base44” is treated as a product inspiration/reference point, not an integration or affiliation.
 
-- **GitHub**: repositories, branches, commits, pull requests, and team permissions
-- **Replit**: browser-based editing, instant previews, and a terminal-like runtime
-- **Supabase**: database, authentication, storage, and usage surfaces
+## Supabase setup
 
-The current MVP is a polished front-end prototype. The workspace interactions are local UI state only; no source code, database, auth, or deployment service is connected yet.
+1. Create a Supabase project.
+2. Copy `.env.example` to `.env.local`.
+3. Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+4. Run `supabase/migrations/001_workspace.sql` in the Supabase SQL editor.
+5. Run `npm install` and `npm run dev`.
+6. Open `http://localhost:3000` and use the magic-link sign-in form.
 
-## Run locally
+Without Supabase environment variables the UI remains in demo mode and explicitly reports that the connection is missing.
 
-```bash
-npm install
-npm run dev
-```
+## Current SaaS foundation
 
-Open http://localhost:3000.
+- Supabase browser and server clients
+- Cookie-aware middleware scaffold
+- Magic-link authentication UI
+- RLS-protected projects and files schema
+- Prompt-to-starter-app interaction
+- Workspace/editor/preview UI
 
-## Next production milestones
+## Production work still required
 
-1. Add authentication and workspace membership.
-2. Connect repositories through GitHub OAuth and the GitHub API.
-3. Add isolated build sandboxes with strict resource limits.
-4. Add Postgres-backed projects, migrations, auth, and object storage.
-5. Add preview deployments and a job queue.
-6. Add audit logs, secrets management, billing, and abuse controls.
-
-The product should never execute untrusted code without isolation, quotas, network controls, and an operational review.
+GitHub OAuth and repository APIs, isolated code execution, deployment workers, object storage uploads, billing, invite/member management, audit logs, abuse prevention, rate limiting, secret encryption, backups, and observability are not enabled by the front-end prototype. Never expose a Supabase service-role key in client code, and never execute untrusted code without a hardened sandbox.
