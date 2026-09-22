@@ -19,6 +19,14 @@ npm run dev
 
 Then open http://localhost:3000.
 
+## Repository map
+
+- `app/` — Next.js UI and global styles
+- `lib/networks.ts` — testnet network metadata
+- `lib/guardrails.ts` — lightweight name screening for the UI
+- `docs/ARCHITECTURE.md` — trust boundaries and deployment flow
+- `docs/COMPLIANCE-GUARDRAILS.md` — product/legal planning checklist
+
 ## Planned milestones
 
 1. Product and legal review; threat model and jurisdiction matrix.
