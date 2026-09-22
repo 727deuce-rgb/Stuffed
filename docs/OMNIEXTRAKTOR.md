@@ -1,14 +1,7 @@
-# OmniExtraktor product boundary
+# OmniExtraktor narrative expansion
 
-OmniExtraktor is a fictional resource-management simulation inside OmniEcosystem. It models extraction speed, energy draw, virtual yield, zone health, and upgrades.
+OmniExtraktor now has an explicitly fictional mystery layer. Players can investigate a disputed calendar, where recovered records suggest a year-6999 timeline while public displays say year 100. This is game-world storytelling, not a claim about real history, secret elites, or current events.
 
-## Safe MVP behavior
+The extraction zone can surface virtual metals, elements, food relics, and narrative fragments. These are fictional collectibles and clues. They are not physical resources, commodity claims, evidence, or redeemable assets.
 
-- The 50 billion OmniCoin figure is a proposed supply-design target only.
-- Users spend non-transferable, non-redeemable simulation credits to activate faster virtual extractors.
-- Outputs are fictional units and are not precious metals, commodities, reserves, securities, or claims on physical resources.
-- The app does not sell mining hardware, tokens, commodities, investments, or financial products.
-
-## Legal and product boundary
-
-OmniEcosystem cannot declare that it “legally has everything you need.” Legal status depends on jurisdiction, product design, providers, and actual operations. Any future token distribution, payment feature, reserve-backed product, mining operation, or real-world resource claim requires jurisdiction-specific counsel, compliance review, and qualified service providers before implementation.
+Each extractor upgrade remains visible in the Upgrade Bay beside the mine view. Survey Drone, Deep Core Rig, and Autonomous Fleet are progressively faster fictional machines purchased with non-transferable simulation credits.
