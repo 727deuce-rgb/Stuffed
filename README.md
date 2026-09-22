@@ -1,14 +1,12 @@
-# Stuffed
+# Forgecloud
 
-Stuffed is a testnet-first, non-custodial workspace for creating, documenting, and deploying utility-token contracts on Base and Solana. The current repository is an intentionally safe MVP scaffold: it does not custody assets, call a wallet, sell tokens, or provide financial products.
+Forgecloud is a Next.js full-stack workspace concept combining:
 
-## Product principles
+- **GitHub**: repositories, branches, commits, pull requests, and team permissions
+- **Replit**: browser-based editing, instant previews, and a terminal-like runtime
+- **Supabase**: database, authentication, storage, and usage surfaces
 
-- **User-signed transactions:** Stuffed prepares transactions; the connected wallet signs them.
-- **Testnet first:** Base Sepolia and Solana Devnet precede any mainnet workflow.
-- **No promises:** Utility, access, or credits must not be marketed as guaranteed returns.
-- **Transparent controls:** Minting, pausing, upgradeability, fees, allocations, and admin keys are visible before signing.
-- **AI with review:** AI outputs are drafts, never legal, tax, financial, or security advice.
+The current MVP is a polished front-end prototype. The workspace interactions are local UI state only; no source code, database, auth, or deployment service is connected yet.
 
 ## Run locally
 
@@ -17,23 +15,15 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:3000.
+Open http://localhost:3000.
 
-## Repository map
+## Next production milestones
 
-- `app/` — Next.js UI and global styles
-- `lib/networks.ts` — testnet network metadata
-- `lib/guardrails.ts` — lightweight name screening for the UI
-- `docs/ARCHITECTURE.md` — trust boundaries and deployment flow
-- `docs/COMPLIANCE-GUARDRAILS.md` — product/legal planning checklist
+1. Add authentication and workspace membership.
+2. Connect repositories through GitHub OAuth and the GitHub API.
+3. Add isolated build sandboxes with strict resource limits.
+4. Add Postgres-backed projects, migrations, auth, and object storage.
+5. Add preview deployments and a job queue.
+6. Add audit logs, secrets management, billing, and abuse controls.
 
-## Planned milestones
-
-1. Product and legal review; threat model and jurisdiction matrix.
-2. Base Sepolia wallet connection and transaction preview.
-3. Audited fixed-supply Solidity templates and source verification.
-4. White-paper and tokenomics generation behind a server-side provider with moderation and human approval.
-5. Solana Devnet adapter and separately reviewed SPL templates.
-6. Mainnet only after counsel, security audit, KYC/AML, payments, and consumer-protection workstreams are complete.
-
-Never commit secrets, private keys, customer data, or confidential legal advice.
+The product should never execute untrusted code without isolation, quotas, network controls, and an operational review.

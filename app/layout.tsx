@@ -1,10 +1,9 @@
-import "./globals.css";
-import "./omni.css";
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OmniEcosystem — One ecosystem. Many useful worlds.",
-  description: "A reviewable, testnet-first ecosystem studio for designing useful digital products.",
+  title: "Forgecloud — Build, ship, and scale",
+  description: "A GitHub, Replit, and Supabase-inspired workspace for building full-stack apps.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
