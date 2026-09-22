@@ -1,23 +1,18 @@
-# Stuffed MVP status
+# Next milestone: a connected local MVP
 
-The app now has a clear first-run experience at `/start`, an interactive Tokenomics Lab at `/lab`, a workspace at `/dashboard`, pricing at `/pricing`, and a product notice at `/terms`.
+The home builder now validates names and utility, saves a project to browser local storage, and routes users to the Tokenomics Lab and workspace. The dashboard reads those saved projects and clearly labels the data as local MVP data.
 
-## What is complete in this milestone
+## What is intentionally not enabled
 
-- First-run onboarding page that explains the product in plain language
-- Direct navigation to the lab and workspace
-- Product notice page for the current testnet-only scope
-- Responsive layouts for the new routes
-- Clear explanation of what a user is buying: creator workflow software, not an investment
+Authentication, cloud persistence, payments, AI API keys, wallet signing, mainnet, custody, token sales, lending, and yield remain disabled. This keeps the app demonstrable without pretending it is a regulated financial product.
 
-## Current boundary
+## Try the flow
 
-This remains a front-end MVP. Data is not yet persisted between sessions, authentication is not enabled, and no wallet or payment credentials are configured. Those are intentional next integrations rather than hidden promises.
+1. Open `/` and create a project.
+2. Continue through the risk review.
+3. Open `/lab` to stress-test assumptions.
+4. Open `/dashboard` to see the saved project.
 
-## The next build order
+## Next technical boundary
 
-1. Connect the homepage CTAs to `/start`, `/lab`, `/dashboard`, and `/pricing`.
-2. Add browser-local project/scenario persistence, then replace it with authenticated storage.
-3. Add a white-paper preview driven by the selected lab scenario.
-4. Add test coverage and CI before wallet integration.
-5. Add user-signed testnet deployment only after reviewing audited templates.
+The next production-quality step is replacing browser storage with authenticated persistence and adding automated tests. Wallet and payment integrations should remain behind feature flags until reviewed.
